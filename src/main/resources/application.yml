@@ -52,3 +52,10 @@ mybatis:
   type-aliases-package: com.wake.pojo # 配置别名 批量将包下的类，设置别名都为首字母小写
   mapper-locations: classpath:/mappers/*.xml # mapperxml位置
 
+aliyun: #以下参数全部修改成自己的
+  oss:
+    endpoint: https://oss-cn-fuzhou.aliyuncs.com
+    accessKeyId: LTAI8iq5T2Av6GLDxX  #假的修改
+    accessKeySecret: C0IrHQcevcotD3Zd5Tc #假的修改
+    bucketName: web-wake-work
+
