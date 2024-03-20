@@ -1,6 +1,11 @@
 package com.wake.mapper;
 
 import com.wake.pojo.Emp;
+import com.wake.pojo.vo.EmpVo;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.List;
 
 /**
 * @author Administrator
@@ -22,4 +27,9 @@ public interface EmpMapper {
 
     int updateByPrimaryKey(Emp record);
 
+    List<Emp> selectBySelective(@Param("empVo") EmpVo empVo);
+
+    int deleteByIds(Integer[] ids);
+
+    Emp findById(Integer id);
 }

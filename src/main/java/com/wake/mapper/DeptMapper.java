@@ -2,6 +2,8 @@ package com.wake.mapper;
 
 import com.wake.pojo.Dept;
 
+import java.util.List;
+
 /**
 * @author Administrator
 * @description 针对表【dept(部门表)】的数据库操作Mapper
@@ -22,4 +24,12 @@ public interface DeptMapper {
 
     int updateByPrimaryKey(Dept record);
 
+    /**
+     * 查询全部信息
+     * @return
+     */
+    List<Dept> selectList();
+
+
+    int updateById(Dept dept);
 }

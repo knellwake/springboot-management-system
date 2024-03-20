@@ -39,6 +39,10 @@ spring:
       max-pool-prepared-statement-per-connection-size: -1
       # 合并多个DruidDataSource的监控数据
       use-global-data-source-stat: true
+  servlet:
+    multipart:
+      max-file-size: 10MB #配置单个文件最大上传大小
+      max-request-size: 100MB #配置单个请求最大上传大小(一次请求可以上传多个文件)
 
 mybatis:
   configuration:  # setting配置
@@ -46,4 +50,5 @@ mybatis:
     map-underscore-to-camel-case: true # true开启属性字段驼峰命名自动映射，将xxx_xxx这样的列名自动映射到xxXxx这样驼峰式命名的属性名
     log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
   type-aliases-package: com.wake.pojo # 配置别名 批量将包下的类，设置别名都为首字母小写
-#  mapper-locations: classpath:/mappers/*.xml # mapperxml位置 使用默认位置/mapper 就注释了
+  mapper-locations: classpath:/mappers/*.xml # mapperxml位置
+

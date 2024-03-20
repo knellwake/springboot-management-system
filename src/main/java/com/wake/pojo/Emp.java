@@ -1,6 +1,8 @@
 package com.wake.pojo;
 
 import java.io.Serializable;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import lombok.AllArgsConstructor;
@@ -28,13 +30,13 @@ public class Emp implements Serializable {
 
     private Integer job;
 
-    private Date entrydate;
+    private LocalDate entrydate;
 
     private Integer deptId;
 
-    private Date createTime;
+    private LocalDateTime createTime;
 
-    private Date updateTime;
+    private LocalDateTime updateTime;
 
     private static final long serialVersionUID = 1L;
 }
