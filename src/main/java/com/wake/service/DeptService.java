@@ -3,33 +3,26 @@ package com.wake.service;
 import com.wake.pojo.Dept;
 import com.wake.utils.Result;
 
+import java.util.List;
+
 public interface DeptService {
     /**
-     * 部门列表数据查询
+     * 查询全部部门数据
      * @return
      */
-    Result queryList();
+    List<Dept> list();
 
     /**
-     * 根据ID删除部门数据
+     * 删除部门
      * @param id
-     * @return
      */
-    Result deleteById(Integer id);
+    void delete(Integer id);
 
     /**
-     * 添加部门数据
+     * 新增部门
      * @param dept
-     * @return
      */
-    Result addDept(Dept dept);
+    void add(Dept dept);
 
-    /**
-     * 根据ID查询部门数据
-     * @param id
-     * @return
-     */
-    Result queryById(Integer id);
-
-    Result updateDept(Dept dept);
+    void update(Dept dept);
 }

@@ -50,7 +50,8 @@ mybatis:
     map-underscore-to-camel-case: true # true开启属性字段驼峰命名自动映射，将xxx_xxx这样的列名自动映射到xxXxx这样驼峰式命名的属性名
     log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
   type-aliases-package: com.wake.pojo # 配置别名 批量将包下的类，设置别名都为首字母小写
-  mapper-locations: classpath:/mappers/*.xml # mapperxml位置
+#  mapper-locations: classpath:/mapper/*.xml
+#  mapper-locations: classpath:/mappers/*.xml # mapperxml位置
 
 aliyun: #以下参数全部修改成自己的
   oss:
